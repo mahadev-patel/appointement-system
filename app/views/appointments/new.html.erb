@@ -1,0 +1,5 @@
+<%= form_for @appointment, :as => :appointment, :url => sign_in_path(@user) do |f| %>
+
+    <%= f.select(:doctor, User.where(role: "doctor").map { |w| [w.id, w.email] }, {}, { :class => 'my_style_class' }) %>  
+
+<% end %>

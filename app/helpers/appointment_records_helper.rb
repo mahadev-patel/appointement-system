@@ -1,0 +1,2 @@
+module AppointmentRecordsHelper
+end
