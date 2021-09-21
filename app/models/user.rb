@@ -5,7 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   enum roles: { admin: 0, patient: 1, doctor: 2 }
-
-
-
+  
+  has_many :appointment_records, dependent: :destroy
 end
